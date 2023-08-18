@@ -1,13 +1,9 @@
 import './App.css';
 import User from "./components/User";
 import Comment from "./components/Comment";
+import Event01 from "./components/events/Event01";
 
 function App() {
-
-    const comment = {
-        title: "This is comment 01",
-        content: 'Content comment 01'
-    }
 
     const users = [
         {
@@ -94,7 +90,7 @@ function App() {
                         content={item.comment.content}
                     />
                 }
-                post = {item.post}
+                post={item.post}
             />
         );
     });
@@ -102,7 +98,8 @@ function App() {
 
     return (
         <>
-            {userLists}
+            {/*{userLists}*/}
+            <Event01/>
         </>
     );
 }

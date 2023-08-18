@@ -1,19 +1,19 @@
-import React from "react";
+import React, {Component} from "react";
 
-class Comment extends React.Component{
+export default class Comment extends Component {
+    // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
     }
+
+    render() {
+        const {title, content} = this.props;
+
+        return (
+            <div className={"comment"}>
+                <h3>{title}</h3>
+                <p>{content}</p>
+            </div>
+        )
+    }
 }
-
-function Comment(prop) {
-    return (
-        <div className={"comment"}>
-            <h3>{prop.title}</h3>
-            <p>{prop.content}</p>
-        </div>
-    )
-}
-
-
-export default Comment;
