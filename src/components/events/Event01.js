@@ -9,14 +9,18 @@ class Event01 extends React.Component {
     render() {
         return (
             <div>
-                <h1>Cronus Hug Farm</h1>
-                <button type={"button"} onClick={this.handleChange}>Change</button>
+                <h1>Cronus Hug Farm Form</h1>
+                <form onSubmit={this.handleChange}>
+                    <input type={"text"} name={"userName"} placeholder={"Username..."}/>
+                    <button type={"submit"}>Submit</button>
+                </form>
             </div>
         );
     }
 
-    handleChange = () => {
-        alert("test")
+    handleChange = (e) => {
+        e.preventDefault();
+        alert("Submit");
     }
 }
 

@@ -1,7 +1,9 @@
 import './App.css';
 import User from "./components/User";
 import Comment from "./components/Comment";
-import Event01 from "./components/events/Event01";
+import Customer from "./components/state/Customer";
+import Counter from "./components/state/Counter";
+import Toggle from "./components/state/Toggle";
 
 function App() {
 
@@ -95,11 +97,16 @@ function App() {
         );
     });
 
+    const customerInfo = {
+        name: 'Manh Hung',
+        email: 'hung.pham@gmail.com'
+    }
+
 
     return (
         <>
-            {/*{userLists}*/}
-            <Event01/>
+            <h1>State React</h1>
+            <Toggle />
         </>
     );
 }
